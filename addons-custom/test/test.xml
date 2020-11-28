@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="test_tree" model="ir.ui.view">
+        <field name="name">test.tree</field>
+        <field name="model">test.model</field>
+        <field name="arch" type="xml">
+            <tree string="Tests">
+                <field name="test_name"/>
+                <field name="just_number"/>
+                <field name="image"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="test_form" model="ir.ui.view">
+        <field name="name">test.form</field>
+        <field name="model">test.model</field>
+        <field name="arch" type="xml">
+            <form string="Tests">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="test_name"/>
+                            <field name="just_number"/>
+                        </group>
+                        <group>
+                            <field name="image"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!--action of test menu-->
+    <record model="ir.actions.act_window" id="action_test">
+        <field name="name">Tests</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">test.model</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create first test!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="test_root" name="Test" sequence="0" web_icon="test,static/description/icon.png"/>
+    <menuitem id="test_test1" name="Test1" parent="test_root" action="action_test"/>
+</odoo>
