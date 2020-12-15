@@ -5,6 +5,7 @@
         <field name="model">factory</field>
         <field name="arch" type="xml">
             <tree string="Factories">
+                <field name="factory_sequence"/>
                 <field name="name"/>
                 <field name="serial"/>
                 <field name="address"/>
@@ -19,6 +20,9 @@
         <field name="arch" type="xml">
             <form string="Factories">
                 <sheet>
+                    <div class="oe_title">
+                        <field name="factory_sequence"/>
+                    </div>
                     <group>
                         <group>
                             <field name="name"/>
