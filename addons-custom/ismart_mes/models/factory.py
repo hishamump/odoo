@@ -11,7 +11,7 @@ class Factory(models.Model):
 
     name = fields.Char(string='Name')
     serial = fields.Char(string='Serial')
-    address = fields.Char(string='address')
+    address = fields.Char(string='Address')
     notes = fields.Char(string='Notes')
     factory_sequence = fields.Char(string='Reference', required=True, copy=False, readonly=True,
                                    index=True, default=lambda self: _('New'))
