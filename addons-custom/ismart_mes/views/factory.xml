@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="factory_tree" model="ir.ui.view">
+        <field name="name">factory.tree</field>
+        <field name="model">factory</field>
+        <field name="arch" type="xml">
+            <tree string="Factories">
+                <field name="name"/>
+                <field name="serial"/>
+                <field name="address"/>
+                <field name="notes"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="factory_form" model="ir.ui.view">
+        <field name="name">factory.form</field>
+        <field name="model">factory</field>
+        <field name="arch" type="xml">
+            <form string="Factories">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="serial"/>
+                            <field name="address"/>
+                        </group>
+                        <group>
+                            <field name="notes"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--action of factory menu-->
+    <record model="ir.actions.act_window" id="action_factory">
+        <field name="name">Factories</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">factory</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create first factory!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="ismart_mes_root" name="iSmart MES" sequence="-1" web_icon="ismart_mes,static/description/icon.png"/>
+    <menuitem id="mes_main" name="Main" sequence="1" parent="ismart_mes_root" />
+    <menuitem id="mes_factory" name="Factories" sequence="1" parent="mes_main" action="action_factory"/>
+</odoo>
