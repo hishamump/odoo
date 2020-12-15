@@ -38,6 +38,19 @@
         </field>
     </record>
 
+    <record id="factory_search" model="ir.ui.view">
+        <field name="name">factory.search</field>
+        <field name="model">factory</field>
+        <field name="arch" type="xml">
+            <search string="Search Factories">
+                <!--Search in both together-->
+                <field name="name" filter_domain="['|',('name','ilike',self),('factory_sequence','ilike',self)]"/>
+                <!--Search in factory_sequence only-->
+                <field name="factory_sequence"/>
+            </search>
+        </field>
+    </record>
+
     <!--action of factory menu-->
     <record model="ir.actions.act_window" id="action_factory">
         <field name="name">Factories</field>
