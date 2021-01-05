@@ -10,6 +10,11 @@ class Course(models.Model):
     name = fields.Char("Title", required=True)
     description = fields.Text()
 
+    responsible_id = fields.Many2one('res.users',
+                                     ondelete='set null', string="Responsible", index=True)
+    employee_id = fields.Many2one('hr.employee',
+                                     ondelete='set null', string="Employee", index=True)
+
 
 class Session(models.Model):
     _name = 'openacademy.session'
@@ -20,6 +25,9 @@ class Session(models.Model):
     duration = fields.Float(digits=(6, 2), help="Duration in days")
     seats = fields.Integer(string="Number of seats")
 
+    instructor_id = fields.Many2one('res.partner', string="Instructor")
+    course_id = fields.Many2one('openacademy.course',
+                                ondelete='cascade', string="Course", required=True)
     # value = fields.Integer()
     # value2 = fields.Float(compute="_value_pc", store=True)
     # description = fields.Text()
