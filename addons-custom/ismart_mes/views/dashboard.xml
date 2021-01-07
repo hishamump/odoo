@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="workstation_form" model="ir.ui.view">
+        <field name="name">dashboard.form</field>
+        <field name="model">dashboard</field>
+        <field name="arch" type="xml">
+            <form string="Widgets">
+
+            </form>
+        </field>
+    </record>
+
+    <!--action of Dashboard menu-->
+    <record model="ir.actions.act_window" id="action_dashboard">
+        <field name="name">Dashboard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">dashboard</field>
+        <field name="view_mode">form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add first widget!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="mes_dashboard" name="Dashboard" sequence="1" parent="ismart_mes_root" action="action_dashboard"/>
+</odoo>

@@ -19,6 +19,7 @@
         'security/ir.model.access.csv',
         'data/sequence.xml',
         'views/menu.xml',
+        'views/dashboard.xml',
         'views/workstation.xml',
         # 'views/factory.xml',
     ],
