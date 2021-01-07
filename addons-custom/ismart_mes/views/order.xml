@@ -23,5 +23,5 @@
         </field>
     </record>
 
-    <menuitem id="mes_order" name="Order" sequence="2" parent="ismart_mes_root" action="action_order"/>
+    <menuitem id="mes_order" name="Orders" sequence="2" parent="ismart_mes_root" action="action_order"/>
 </odoo>
