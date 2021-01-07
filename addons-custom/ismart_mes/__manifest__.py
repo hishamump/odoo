@@ -20,7 +20,7 @@
         'data/sequence.xml',
         'views/menu.xml',
         'views/workstation.xml',
-        'views/factory.xml',
+        # 'views/factory.xml',
     ],
     'installable': True,
     'application': True,

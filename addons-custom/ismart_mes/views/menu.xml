@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="ismart_mes_root" name="iSmart MES" sequence="-1" web_icon="ismart_mes,static/description/icon.png"/>
+<!--    <menuitem id="mes_main" name="Main" sequence="1" parent="ismart_mes_root" />-->
+</odoo>
