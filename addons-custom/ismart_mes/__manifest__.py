@@ -20,6 +20,7 @@
         'data/sequence.xml',
         'views/menu.xml',
         'views/dashboard.xml',
+        'views/order.xml',
         'views/workstation.xml',
         # 'views/factory.xml',
     ],
