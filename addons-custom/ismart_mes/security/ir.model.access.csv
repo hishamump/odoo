@@ -1,4 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_dashboard,access.dashboard,model_dashboard,,1,1,1,1
 access_order,access.order,model_order,,1,1,1,1
+access_process,access.process,model_process,,1,1,1,1
 access_workstation,access.workstation,model_workstation,,1,1,1,1

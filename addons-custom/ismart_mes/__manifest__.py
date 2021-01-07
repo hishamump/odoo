@@ -21,6 +21,7 @@
         'views/menu.xml',
         'views/dashboard.xml',
         'views/order.xml',
+        'views/process.xml',
         'views/workstation.xml',
         # 'views/factory.xml',
     ],
