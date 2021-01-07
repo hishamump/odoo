@@ -52,7 +52,5 @@
         </field>
     </record>
 
-
-
-    <menuitem id="mes_workstation" name="Workstations" sequence="2" parent="mes_main" action="action_workstation"/>
+    <menuitem id="mes_workstation" name="Workstations" sequence="2" parent="ismart_mes_root" action="action_workstation"/>
 </odoo>
