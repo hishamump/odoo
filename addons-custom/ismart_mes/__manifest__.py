@@ -23,6 +23,7 @@
         'views/order.xml',
         'views/process.xml',
         'views/workstation.xml',
+        'views/report.xml',
         # 'views/factory.xml',
     ],
     'installable': True,
