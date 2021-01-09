@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="order_tree" model="ir.ui.view">
+        <field name="name">order.tree</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_tree_view" />
+        <field name="arch" type="xml">
+            <tree position="replace">
+                <tree>
+                    <field name="name" />
+                    <field name="date_planned_start" />
+                    <field name="product_id" readonly="1"/>
+                    <button name="order_details" string="Order Details" class="oe_highlight"/>
+                    <button name="create_process" string="Create Process" class="oe_highlight"/>
+                </tree>
+           </tree>
+        </field>
+    </record>
+
     <record id="order_form" model="ir.ui.view">
         <field name="name">order.form</field>
         <field name="model">mrp.production</field>
