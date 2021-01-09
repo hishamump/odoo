@@ -14,7 +14,7 @@
     'author': 'Hisham Alwanni',
     'website': '/ismart_mes/static/info.html',
     'images': [],
-    'depends': [],
+    'depends': ['mrp'],
     'data': [
         'security/ir.model.access.csv',
         'data/sequence.xml',
