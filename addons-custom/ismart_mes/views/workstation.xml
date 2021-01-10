@@ -41,7 +41,8 @@
         <field name="name">workstation.graph</field>
         <field name="model">workstation</field>
         <field name="arch" type="xml">
-            <graph string="Workstations">
+            <graph string="Workstations" type="pie">
+                <field name="location"/>
                 <field name="name"/>
             </graph>
         </field>
