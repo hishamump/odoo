@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
     <record id="workstation_tree" model="ir.ui.view">
         <field name="name">workstation.tree</field>
         <field name="model">workstation</field>
@@ -10,7 +11,6 @@
                 <field name="location"/>
                 <field name="notes"/>
                 <field name="image"/>
-                <field name="production_order"/>
             </tree>
         </field>
     </record>
@@ -26,7 +26,6 @@
                             <field name="name"/>
                             <field name="serial"/>
                             <field name="image"/>
-                            <field name="production_order"/>
                         </group>
                         <group>
                             <field name="location"/>
@@ -37,7 +36,6 @@
             </form>
         </field>
     </record>
-
 
     <!--action of Workstation menu-->
     <record model="ir.actions.act_window" id="action_workstation">

@@ -14,4 +14,3 @@ class Workstation(models.Model):
     location = fields.Char(string='Location')
     notes = fields.Char(string='Notes')
     image = fields.Binary('Image')
-    production_order = fields.Integer('Order')
