@@ -37,12 +37,22 @@
         </field>
     </record>
 
+    <record id="workstation_graph" model="ir.ui.view">
+        <field name="name">workstation.graph</field>
+        <field name="model">workstation</field>
+        <field name="arch" type="xml">
+            <graph string="Workstations">
+                <field name="name"/>
+            </graph>
+        </field>
+    </record>
+
     <!--action of Workstation menu-->
     <record model="ir.actions.act_window" id="action_workstation">
         <field name="name">Workstations</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">workstation</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,graph</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create first workstation!
