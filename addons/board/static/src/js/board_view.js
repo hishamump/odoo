@@ -60,7 +60,7 @@ var BoardController = FormController.extend({
         return this._rpc({
                 route: '/web/view/edit_custom',
                 params: {
-                    custom_id: this.customViewID,
+                    custom_id: this.customViewID != null? this.customViewID: '',
                     arch: arch,
                 }
             }).then(dataManager.invalidate.bind(dataManager));
