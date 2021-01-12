@@ -11,5 +11,14 @@
             <field name="company_id" eval="False"/>
         </record>
 
+        <!-- Sequences for process -->
+        <record id="seq_process" model="ir.sequence">
+            <field name="name">Process Sequence</field>
+            <field name="code">ismart.mes.process.sequence</field>
+            <field name="prefix">P</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
     </data>
 </odoo>

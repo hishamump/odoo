@@ -5,6 +5,7 @@
         <field name="model">process</field>
         <field name="arch" type="xml">
             <tree string="Processes">
+                <field name="process_sequence"/>
                 <field name="name"/>
                 <field name="start_date"/>
                 <field name="end_date"/>
@@ -19,6 +20,9 @@
         <field name="arch" type="xml">
             <form string="Processes">
                 <sheet>
+                    <div class="oe_title">
+                        <field name="process_sequence" readonly="1"/>
+                    </div>
                     <group>
                         <group>
                             <field name="name"/>
