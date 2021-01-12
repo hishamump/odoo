@@ -14,7 +14,7 @@ class Workstation(models.Model):
     name = fields.Char(string='Name')
     location = fields.Char(string='Location')
     notes = fields.Char(string='Notes')
-    image = fields.Binary('Image')
+    image = fields.Image('Image', max_width=300, max_height=300)
 
     @api.model
     def create(self, values):
