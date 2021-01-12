@@ -13,12 +13,33 @@
         </field>
     </record>
 
+    <record id="process_form" model="ir.ui.view">
+        <field name="name">process.form</field>
+        <field name="model">process</field>
+        <field name="arch" type="xml">
+            <form string="Processes">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="order_id"/>
+                        </group>
+                        <group>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
     <!--action of Processes menu-->
     <record model="ir.actions.act_window" id="action_process">
         <field name="name">Process</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">process</field>
-        <field name="view_mode">tree</field>
+        <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 No process found!
