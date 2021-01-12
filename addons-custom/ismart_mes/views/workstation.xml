@@ -6,8 +6,8 @@
         <field name="model">workstation</field>
         <field name="arch" type="xml">
             <tree string="Tests">
+                <field name="workstation_sequence"/>
                 <field name="name"/>
-                <field name="serial"/>
                 <field name="location"/>
                 <field name="notes"/>
                 <field name="image"/>
@@ -21,10 +21,12 @@
         <field name="arch" type="xml">
             <form string="Workstations">
                 <sheet>
+                    <div class="oe_title">
+                        <field name="workstation_sequence" readonly="1"/>
+                    </div>
                     <group>
                         <group>
                             <field name="name"/>
-                            <field name="serial"/>
                             <field name="image"/>
                         </group>
                         <group>
