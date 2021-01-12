@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="process_form" model="ir.ui.view">
-        <field name="name">process.form</field>
+    <record id="process_tree" model="ir.ui.view">
+        <field name="name">process.tree</field>
         <field name="model">process</field>
         <field name="arch" type="xml">
-            <form string="Processes">
-
-            </form>
+            <tree string="Processes">
+                <field name="name"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="order_id"/>
+            </tree>
         </field>
     </record>
 
@@ -15,7 +18,7 @@
         <field name="name">Process</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">process</field>
-        <field name="view_mode">form</field>
+        <field name="view_mode">tree</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 No process found!
