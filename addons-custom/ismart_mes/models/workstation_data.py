@@ -13,9 +13,9 @@ class WorkstationData(models.Model):
     process_id = fields.Many2one('process',
                                  ondelete='cascade', string="Process", required=True)
     record_datetime = fields.Char(string='Date')
-    power_read = fields.Char(string='Notes')
-    fuel_read = fields.Binary('Image')
-    vibration_read = fields.Integer('Order')
+    power_read = fields.Float((12, 3))
+    fuel_read = fields.Float((12, 3))
+    vibration_read = fields.Float((12, 3))
     status = fields.Selection([
         ('off', 'Off'),
         ('working', 'Working'),

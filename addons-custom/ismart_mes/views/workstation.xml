@@ -9,6 +9,8 @@
                 <field name="workstation_sequence"/>
                 <field name="name"/>
                 <field name="location"/>
+                <field name="power_read"/>
+                <field name="vibration_read"/>
                 <field name="notes"/>
                 <field name="image" widget="image" width="70" height="70"/>
             </tree>
@@ -21,6 +23,11 @@
         <field name="arch" type="xml">
             <form string="Workstations">
                 <sheet>
+                    <div class="oe_button_box" type="button_box">
+                        <button name="get_workstation_status" string="Get Status"
+                                type="object" class="oe_stat_button" icon="fa-archive">
+                        </button>
+                    </div>
                     <div class="oe_title">
                         <field name="workstation_sequence" readonly="1"/>
                     </div>
@@ -31,6 +38,8 @@
                         </group>
                         <group>
                             <field name="location"/>
+                            <field name="power_read"/>
+                            <field name="vibration_read"/>
                             <field name="notes"/>
                         </group>
                     </group>
@@ -44,8 +53,9 @@
         <field name="model">workstation</field>
         <field name="arch" type="xml">
             <graph string="Workstations" type="pie">
-                <field name="location"/>
                 <field name="name"/>
+                <field name="power_read"/>
+                <field name="vibration_read"/>
             </graph>
         </field>
     </record>
