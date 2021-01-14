@@ -10,8 +10,8 @@
                     <field name="name" />
                     <field name="date_planned_start" />
                     <field name="product_id" readonly="1"/>
-                    <button name="order_details" string="Order Details" class="oe_highlight"/>
-                    <button name="create_process" string="Create Process" class="oe_highlight"/>
+                    <button name="create_process" string="Create Process"
+                            type="object" class="oe_highlight"/>
                 </tree>
            </tree>
         </field>
@@ -26,6 +26,7 @@
                 <page string="Processes">
                     <group>
                         <field name="name"/>
+                        <field name="process_id"/>
                     </group>
                 </page>
             </notebook>
