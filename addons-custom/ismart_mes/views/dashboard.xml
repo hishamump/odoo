@@ -2,7 +2,7 @@
 <odoo>
     <record id="action_board_order" model="ir.actions.act_window">
         <field name="name">action.board.order</field>
-        <field name="res_model">order</field>
+        <field name="res_model">mrp.production</field>
         <field name="view_mode">graph</field>
         <field name="view_id" ref="order_graph"/>
     </record>

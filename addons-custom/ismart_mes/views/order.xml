@@ -36,9 +36,8 @@
         <field name="name">order.graph</field>
         <field name="model">mrp.production</field>
         <field name="arch" type="xml">
-            <graph string="Orders">
-                <field name="product_id"/>
-                <field name="name"/>
+            <graph string="Orders" type="pie">
+                <field name="product_id" type="row"/>
             </graph>
         </field>
     </record>
