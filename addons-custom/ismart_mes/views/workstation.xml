@@ -52,13 +52,26 @@
         <field name="name">workstation.graph</field>
         <field name="model">workstation</field>
         <field name="arch" type="xml">
-            <graph string="Workstations" type="pie">
-                <field name="name"/>
-                <field name="power_read"/>
-                <field name="vibration_read"/>
+            <graph string="Workstations" type="bar">
+                <field name="name" type="row"/>
+                <field name="location" type="row"/>
+                <field name="power_read" type="measure"/>
             </graph>
         </field>
     </record>
+
+    <record id="workstation_vibration_graph" model="ir.ui.view">
+        <field name="name">workstation.vibration.graph</field>
+        <field name="model">workstation</field>
+        <field name="arch" type="xml">
+            <graph string="Workstations Vibrations" type="bar">
+                <field name="name" type="row"/>
+                <field name="location" type="row"/>
+                <field name="vibration_read" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
 
     <!--action of Workstation menu-->
     <record model="ir.actions.act_window" id="action_workstation">
