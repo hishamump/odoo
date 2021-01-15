@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
+    <record id="action_board_process" model="ir.actions.act_window">
+        <field name="name">action.board.process</field>
+        <field name="res_model">process</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="process_graph"/>
+    </record>
+
     <record id="action_board_order" model="ir.actions.act_window">
         <field name="name">action.board.order</field>
         <field name="res_model">mrp.production</field>
@@ -38,8 +46,11 @@
                     </column>
                     <column>
                         <action
-                            string="Orders"
+                            string="Orders by products"
                             name="%(action_board_order)d"/>
+                        <action
+                            string="Processes by status"
+                            name="%(action_board_process)d"/>
                     </column>
                 </board>
             </form>
