@@ -9,6 +9,7 @@
                 <field name="name"/>
                 <field name="start_date"/>
                 <field name="end_date"/>
+                <field name="status"/>
                 <field name="order_id"/>
             </tree>
         </field>
@@ -31,6 +32,7 @@
                         <group>
                             <field name="start_date"/>
                             <field name="end_date"/>
+                            <field name="status"/>
                         </group>
                     </group>
                 </sheet>

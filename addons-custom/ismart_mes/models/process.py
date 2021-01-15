@@ -15,6 +15,12 @@ class Process(models.Model):
     end_date = fields.Datetime(string='End Date')
     order_id = fields.Many2one('mrp.production',
                                ondelete='set null', string="Order", index=True)
+    status = fields.Selection([
+        ('inprogress', 'In Progress'),
+        ('pause', 'Pause'),
+        ('stop', 'Stop'),
+        ('off', 'Off')], default='off',
+        help="The status of the process.")
 
     @api.model
     def create(self, values):
