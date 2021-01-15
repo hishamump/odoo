@@ -26,7 +26,14 @@
                 <page string="Processes">
                     <group>
                         <field name="name"/>
-                        <field name="process_id"/>
+                        <field name="process_id">
+                            <tree editable="bottom">
+                                <field name="name"></field>
+                                <field name="start_date"></field>
+                                <field name="end_date"></field>
+                                <field name="order_id" invisible="1"></field>
+                            </tree>
+                        </field>
                     </group>
                 </page>
             </notebook>
