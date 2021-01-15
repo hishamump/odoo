@@ -23,6 +23,7 @@ class Process(models.Model):
         ('stop', 'Stop'),
         ('off', 'Off')], default='off',
         help="The status of the process.")
+    workstation_ids = fields.Many2many('workstation', string="Workstations")
 
     @api.model
     def create(self, values):

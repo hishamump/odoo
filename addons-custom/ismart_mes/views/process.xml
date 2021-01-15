@@ -44,6 +44,14 @@
                             <field name="status"/>
                         </group>
                     </group>
+                    <label for="workstation_ids"/>
+                    <field name="workstation_ids">
+                        <tree editable="bottom">
+                            <field name="name"/>
+                            <field name="location"/>
+                            <field name="notes"/>
+                        </tree>
+                    </field>
                 </sheet>
             </form>
         </field>
