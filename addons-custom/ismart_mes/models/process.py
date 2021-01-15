@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 # Created by Hisham.
+import json
 
+import requests
 from odoo import models, fields, _, api
 
 
@@ -29,8 +31,28 @@ class Process(models.Model):
         result = super(Process, self).create(values)
         return result
 
-    def start(self):
-        print("Started")
+    def start_process(self):
+        resp = requests.get('http://localhost:8012/machine/start.php')
+        if resp.status_code == 200:
+            json_data = resp.json()
+            Process.json_print(json_data)
+            self.status = 'inprogress'
+            print("Started")
+        else:
+            print("Error")
 
-    def stop(self):
-        print("Started")
+    def stop_process(self):
+        resp = requests.get('http://localhost:8012/machine/stop.php')
+        if resp.status_code == 200:
+            json_data = resp.json()
+            Process.json_print(json_data)
+            self.status = 'stop'
+            print("Stopped")
+        else:
+            print("Error")
+
+    @staticmethod
+    def json_print(obj):
+        # create a formatted string of the Python JSON object
+        text = json.dumps(obj, sort_keys=True, indent=4)
+        print(text)
