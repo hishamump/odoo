@@ -73,6 +73,15 @@
         </field>
     </record>
 
+    <record id="workstation_status_graph" model="ir.ui.view">
+        <field name="name">workstation.status.graph</field>
+        <field name="model">workstation</field>
+        <field name="arch" type="xml">
+            <graph string="Workstations Status" type="pie">
+                <field name="status" type="row"/>
+            </graph>
+        </field>
+    </record>
 
     <!--action of Workstation menu-->
     <record model="ir.actions.act_window" id="action_workstation">

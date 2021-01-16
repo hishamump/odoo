@@ -29,6 +29,13 @@
         <field name="view_id" ref="workstation_vibration_graph"/>
     </record>
 
+    <record id="action_board_workstation_status" model="ir.actions.act_window">
+        <field name="name">action.board.workstation.status</field>
+        <field name="res_model">workstation</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="workstation_status_graph"/>
+    </record>
+
     <record id="dashboard_form" model="ir.ui.view">
         <field name="name">dashboard.form</field>
         <field name="model">board.board</field>
@@ -43,6 +50,9 @@
                         <action
                             string="Workstations Power (V)"
                             name="%(action_board_workstation)d"/>
+                        <action
+                            string="Workstations Status"
+                            name="%(action_board_workstation_status)d"/>
                     </column>
                     <column>
                         <action
