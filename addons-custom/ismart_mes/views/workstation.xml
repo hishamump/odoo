@@ -40,6 +40,7 @@
                             <field name="location"/>
                             <field name="power_read"/>
                             <field name="vibration_read"/>
+                            <field name="status"/>
                             <field name="notes"/>
                         </group>
                     </group>

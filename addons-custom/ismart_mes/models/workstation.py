@@ -19,9 +19,16 @@ class Workstation(models.Model):
     notes = fields.Char(string='Notes')
     image = fields.Image('Image', max_width=300, max_height=300)
 
-    power_read = fields.Float(string='Power', digits=(12, 3))
-    fuel_read = fields.Float(string='Fuel', digits=(12, 3))
-    vibration_read = fields.Float(string='Vibration', digits=(12, 3))
+    power_read = fields.Float(string='Power', digits=(12, 3), readonly=True)
+    fuel_read = fields.Float(string='Fuel', digits=(12, 3), readonly=True)
+    vibration_read = fields.Float(string='Vibration', digits=(12, 3), readonly=True)
+    status = fields.Selection([
+        ('off', 'Off'),
+        ('working', 'Working'),
+        ('idle', 'Idle'),
+        ('broken', 'Broken'),
+        ('disable', 'Disable')], required=True, default='off', readonly=True,
+        help="The status of the workstation.")
 
     @api.model
     def create(self, values):
@@ -40,6 +47,7 @@ class Workstation(models.Model):
             Workstation.json_print(obj)
             self.power_read = obj["power"]
             self.vibration_read = obj["vibration"]
+            self.status = obj["status"]
             print(self.power_read)
             print(self.vibration_read)
             return json_data
